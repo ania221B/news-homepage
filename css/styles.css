@@ -5,8 +5,8 @@
 :root {
   --clr-neutral-100: hsl(36, 100%, 99%);
   --clr-neutral-200: hsl(233, 8%, 79%);
-  --clr-primary-400: hsl(236, 13%, 42%);
-  --clr-primary-900: hsl(240, 100%, 5%);
+  --clr-neutral-400: hsl(236, 13%, 42%);
+  --clr-neutral-900: hsl(240, 100%, 5%);
 
   --clr-primary-400: hsl(35, 77%, 62%);
   --clr-secondary-400: hsl(5, 85%, 63%);
@@ -55,8 +55,8 @@ h4,
 h5,
 h6,
 p,
-figure,
-blockquote,
+li figure,
+figcaption blockquote,
 dl,
 dd {
   margin: 0;
@@ -87,6 +87,13 @@ picture {
   object-fit: cover;
 }
 
+/* removes list styles on ul and ol elements with the role of list*/
+
+ol[role="list"],
+ul[role="list"] {
+  list-style: none;
+}
+
 /* inherits fonts for button and inputs*/
 
 button,
@@ -110,4 +117,94 @@ textarea {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* ===================
+    UTILITY CLASSES
+===================== */
+
+.container {
+  width: 95%;
+  max-width: 75rem;
+  margin-inline: auto;
+}
+
+.flex {
+  display: flex;
+  gap: var(--flex-space, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--grid-space, 1rem);
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1rem);
+}
+
+.text-neutral-100 {
+  color: var(--clr-neutral-100);
+}
+.text-neutral-200 {
+  color: var(--clr-neutral-200);
+}
+.text-neutral-400 {
+  color: var(--clr-neutral-400);
+}
+.text-neutral-900 {
+  color: var(--clr-neutral-900);
+}
+.text-primary-400 {
+  color: var(--clr-primary-400);
+}
+.text-secondary-400 {
+  color: var(--clr-secondary-400);
+}
+
+.bg-neutral-100 {
+  background-color: var(--clr-neutral-100);
+}
+.bg-neutral-200 {
+  background-color: var(--clr-neutral-200);
+}
+.bg-neutral-400 {
+  background-color: var(--clr-neutral-400);
+}
+.bg-neutral-900 {
+  background-color: var(--clr-neutral-900);
+}
+.bg-primary-400 {
+  background-color: var(--clr-primary-400);
+}
+.bg-secondary-400 {
+  background-color: var(--clr-secondary-400);
+}
+
+.fs-400 {
+  font-size: var(--fs-400);
+}
+.fw-400 {
+  font-weight: var(--fw-400);
+}
+.fw-700 {
+  font-weight: var(--fw-700);
+}
+.fw-800 {
+  font-weight: var(--fw-800);
+}
+
+.d-block {
+  display: block;
+}
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  border: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0 0) !important;
+  white-space: nowrap !important;
 }
