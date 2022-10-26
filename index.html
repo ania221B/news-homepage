@@ -38,8 +38,8 @@
   </head>
   <body>
     <a href="#main-content">Skip to main Content</a>
-    <header>
-      <div class="container">
+    <header class="primary-header">
+      <div class="container flex">
         <div class="logo">
           <svg width="65" height="40" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -71,13 +71,13 @@
       </div>
     </header>
     <main id="main-content">
-      <div class="container">
+      <div class="container grid grid--home">
         <header class="sr-only">
           <h1>Our Articles</h1>
         </header>
-        <section>
-          <h2 class="sr-only">Featured</h2>
-          <article>
+        <section aria-labelledby="featured__title" class="featured-article">
+          <h2 id="featured__title" class="sr-only">Featured</h2>
+          <article class="flow">
             <picture>
               <source
                 srcset="assets/images/image-web-3-desktop.jpg"
@@ -101,8 +101,12 @@
             </button>
           </article>
         </section>
-        <section class="card" data-theme="dark">
-          <h2 class="card__title fs-800 fw-800">New</h2>
+        <section
+          aria-labelledby="new__title"
+          class="new-articles card"
+          data-theme="dark"
+        >
+          <h2 id="new__title" class="card__title fs-800 fw-800">New</h2>
           <ul class="card__list" role="list">
             <li>
               <article class="article-preview">
@@ -136,9 +140,9 @@
             </li>
           </ul>
         </section>
-        <section>
-          <h2 class="sr-only">Most Popular</h2>
-          <ol class="numbered-titles" role="list">
+        <section aria-labelledby="popular__title" class="popular-articles">
+          <h2 id="popular__title" class="sr-only">Most Popular</h2>
+          <ol class="numbered-titles flow" role="list">
             <li>
               <article class="article-preview flex">
                 <div>
