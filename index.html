@@ -75,9 +75,9 @@
         <header class="sr-only">
           <h1>Our Articles</h1>
         </header>
-        <section aria-labelledby="featured__title" class="featured-article">
+        <section aria-labelledby="featured__title" class="featured-articles">
           <h2 id="featured__title" class="sr-only">Featured</h2>
-          <article class="flow">
+          <article class="featured__article article__preview flow">
             <picture>
               <source
                 srcset="assets/images/image-web-3-desktop.jpg"
@@ -88,17 +88,19 @@
             <h3 class="fs-900 fw-800 text-neutral-900">
               The Bright Future of Web 3.0?
             </h3>
-            <p>
-              We dive into the next evolution of the web that claims to put the
-              power of the platforms back into the hands of the people. But is
-              it really fulfilling its promise?
-            </p>
-            <button
-              class="btn fs-500 fw-700 uppercase letter-spacing-1"
-              data-type="primary"
-            >
-              Read more
-            </button>
+            <div class="article-preview__body flow">
+              <p>
+                We dive into the next evolution of the web that claims to put
+                the power of the platforms back into the hands of the people.
+                But is it really fulfilling its promise?
+              </p>
+              <button
+                class="btn fs-400 fw-700 uppercase letter-spacing-1"
+                data-type="primary"
+              >
+                Read more
+              </button>
+            </div>
           </article>
         </section>
         <section
@@ -142,13 +144,13 @@
         </section>
         <section aria-labelledby="popular__title" class="popular-articles">
           <h2 id="popular__title" class="sr-only">Most Popular</h2>
-          <ol class="numbered-titles flow" role="list">
+          <ol class="numbered-titles" role="list">
             <li>
-              <article class="article-preview flex">
+              <article class="article-preview grid" data-type="3-col">
                 <div>
                   <img src="assets/images/image-retro-pcs.jpg" alt="" />
                 </div>
-                <div>
+                <div class="article-preview__body flow">
                   <h3 class="article-preview__title">
                     <span aria-label="ranking number">01</span>
                     <a>Reviving Retro PCs</a>
@@ -158,11 +160,11 @@
               </article>
             </li>
             <li>
-              <article class="article-preview flex">
+              <article class="article-preview grid" data-type="3-col">
                 <div>
                   <img src="assets/images/image-top-laptops.jpg" alt="" />
                 </div>
-                <div>
+                <div class="article-preview__body flow">
                   <h3 class="article-preview__title">
                     <span aria-label="ranking number">02</span>
                     <a>Top 10 Laptops of 2022</a>
@@ -172,11 +174,11 @@
               </article>
             </li>
             <li>
-              <article class="article-preview flex">
+              <article class="article-preview grid" data-type="3-col">
                 <div>
                   <img src="assets/images/image-gaming-growth.jpg" alt="" />
                 </div>
-                <div>
+                <div class="article-preview__body flow">
                   <h3 class="article-preview__title">
                     <span aria-label="ranking number">03</span>
                     <a>The Growth of Gaming</a>
