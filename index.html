@@ -50,21 +50,21 @@
         </div>
         <button aria-label="mobile navigation menu"></button>
         <nav>
-          <ul role="list">
+          <ul class="nav__list flex" role="list">
             <li>
-              <a href="#">Home</a>
+              <a href="#" class="nav__link">Home</a>
             </li>
             <li>
-              <a href="#">New</a>
+              <a href="#" class="nav__link">New</a>
             </li>
             <li>
-              <a href="#">Popular</a>
+              <a href="#" class="nav__link">Popular</a>
             </li>
             <li>
-              <a href="#">Trending</a>
+              <a href="#" class="nav__link">Trending</a>
             </li>
             <li>
-              <a href="#">Categories</a>
+              <a href="#" class="nav__link">Categories</a>
             </li>
           </ul>
         </nav>
@@ -113,7 +113,7 @@
             <li>
               <article class="article-preview flow">
                 <h3 class="article-preview__title">
-                  <a href="#">Hydrogen VS Electric Cars</a>
+                  <a href="#" class="link">Hydrogen VS Electric Cars</a>
                 </h3>
                 <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
               </article>
@@ -121,7 +121,7 @@
             <li>
               <article class="article-preview flow">
                 <h3 class="article-preview__title">
-                  <a href="#">The Downsides of AI Artistry</a>
+                  <a href="#" class="link">The Downsides of AI Artistry</a>
                 </h3>
                 <p>
                   What are the possible adverse effects of on-demand AI image
@@ -132,7 +132,7 @@
             <li>
               <article class="article-preview flow">
                 <h3 class="article-preview__title">
-                  <a href="#">Is VC Funding Drying Up?</a>
+                  <a href="#" class="link">Is VC Funding Drying Up?</a>
                 </h3>
                 <p>
                   Private funding by VC firms is down 50% YOY. We take a look at
@@ -144,17 +144,23 @@
         </section>
         <section aria-labelledby="popular__title" class="popular-articles">
           <h2 id="popular__title" class="sr-only">Most Popular</h2>
-          <ol class="numbered-titles" role="list">
+          <ol class="popular__list numbered-titles" role="list">
             <li>
               <article class="article-preview grid" data-type="3-col">
                 <div>
-                  <img src="assets/images/image-retro-pcs.jpg" alt="" />
+                  <img
+                    src="assets/images/image-retro-pcs.jpg"
+                    alt=""
+                    class="max-height"
+                  />
                 </div>
                 <div class="article-preview__body flow">
-                  <h3 class="article-preview__title">
-                    <span aria-label="ranking number">01</span>
-                    <a>Reviving Retro PCs</a>
-                  </h3>
+                  <header class="flow">
+                    <h3>01</h3>
+                    <p class="article-preview__title title">
+                      <a href="#" class="link">Reviving Retro PCs</a>
+                    </p>
+                  </header>
                   <p>What happens when old PCs are given modern upgrades?</p>
                 </div>
               </article>
@@ -162,13 +168,20 @@
             <li>
               <article class="article-preview grid" data-type="3-col">
                 <div>
-                  <img src="assets/images/image-top-laptops.jpg" alt="" />
+                  <img
+                    src="assets/images/image-top-laptops.jpg"
+                    alt=""
+                    class="max-height"
+                  />
                 </div>
                 <div class="article-preview__body flow">
-                  <h3 class="article-preview__title">
-                    <span aria-label="ranking number">02</span>
-                    <a>Top 10 Laptops of 2022</a>
-                  </h3>
+                  <header class="flow">
+                    <h3>02</h3>
+                    <p class="article-preview__title title">
+                      <a href="#" class="link">Top 10 Laptops of 2022</a>
+                    </p>
+                  </header>
+
                   <p>Our best picks for various needs and budgets.</p>
                 </div>
               </article>
@@ -176,13 +189,20 @@
             <li>
               <article class="article-preview grid" data-type="3-col">
                 <div>
-                  <img src="assets/images/image-gaming-growth.jpg" alt="" />
+                  <img
+                    src="assets/images/image-gaming-growth.jpg"
+                    alt=""
+                    class="max-height"
+                  />
                 </div>
                 <div class="article-preview__body flow">
-                  <h3 class="article-preview__title">
-                    <span aria-label="ranking number">03</span>
-                    <a>The Growth of Gaming</a>
-                  </h3>
+                  <header class="flow">
+                    <h3>03</h3>
+                    <p class="article-preview__title title">
+                      <a href="#" class="link">The Growth of Gaming</a>
+                    </p>
+                  </header>
+
                   <p>How the pandemic has sparked fresh opportunities.</p>
                 </div>
               </article>
