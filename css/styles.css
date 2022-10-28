@@ -342,7 +342,13 @@ textarea {
   inset: 0;
   width: 100%;
   background-color: var(--clr-neutral-900);
+  clip-path: circle(0% at 0% 0%);
+  transition: clip-path 550ms;
   z-index: -1;
+}
+
+.btn[data-type="primary"]:hover::before {
+  clip-path: circle(75%);
 }
 
 .card {
