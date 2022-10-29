@@ -63,6 +63,8 @@ body {
   font-weight: var(--fw-400);
   color: var(--clr-neutral-400);
   background-color: var(--clr-neutral-100);
+
+  position: relative;
 }
 
 /* removes default margin */
@@ -272,6 +274,20 @@ textarea {
   white-space: nowrap !important;
 }
 
+.skip-to-content {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  display: inline-block;
+  text-decoration: none;
+  transition: transform 300ms ease-out;
+}
+
+.skip-to-content:focus {
+  transform: translate(-50%, 0);
+}
+
 /* ===================
     COMPONENTS
 ===================== */
@@ -342,22 +358,34 @@ textarea {
 }
 
 .btn[data-type="primary"] {
+  --hover-bg: var(--clr-neutral-900);
   background-color: var(--clr-secondary-400);
   color: var(--clr-neutral-100);
 }
 
-.btn[data-type="primary"]::before {
+.btn[data-type="reversed"] {
+  --hover-bg: var(--clr-secondary-400);
+  background-color: var(--clr-neutral-900);
+  color: var(--clr-neutral-100);
+}
+
+.btn::before {
   content: "";
   position: absolute;
   inset: 0;
   width: 100%;
-  background-color: var(--clr-neutral-900);
+  background-color: var(--hover-bg);
   clip-path: circle(0% at 0% 0%);
   transition: clip-path 550ms;
   z-index: -1;
 }
 
-.btn[data-type="primary"]:hover::before {
+.btn[data-type="reversed"]::before {
+  transition-delay: 300ms;
+}
+
+.btn:hover::before,
+.btn:focus::before {
   clip-path: circle(75%);
 }
 
