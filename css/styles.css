@@ -295,6 +295,10 @@ textarea {
   align-items: center;
 }
 
+.nav__list {
+  --flex-space: 2.6rem;
+}
+
 .nav__link,
 .link {
   text-decoration: none;
@@ -310,6 +314,10 @@ textarea {
 }
 
 @media (max-width: 45em) {
+  .primary-header .flex {
+    align-items: start;
+  }
+
   nav {
     position: fixed;
     inset: 0 0 0 33%;
@@ -318,18 +326,15 @@ textarea {
     padding-block: max(5rem, 17vh);
     background-color: var(--clr-neutral-100);
 
-    transform: translateX(100%);
+    transform: translateX(0);
     transition: transform 750ms ease-in-out;
     z-index: 10;
   }
 
-  .nav__list.flex {
+  .nav__list {
+    --flex-space: 1rem;
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  .nav__list li:where(:not(:first-child)) {
-    margin: 0.5rem 0 0 0;
   }
 
   .nav__link {
