@@ -63,6 +63,9 @@ body {
   font-weight: var(--fw-400);
   color: var(--clr-neutral-400);
   background-color: var(--clr-neutral-100);
+
+  display: flex;
+  flex-direction: column;
 }
 
 /* removes default margin */
@@ -143,6 +146,10 @@ textarea {
 ::selection {
   color: var(--clr-neutral-100);
   background-color: var(--clr-primary-400);
+}
+
+main {
+  margin-block-end: auto;
 }
 
 /* ===================
@@ -588,8 +595,9 @@ textarea {
     grid-row: 2;
   }
 
+  /* featured article */
+
   .featured__article {
-    --grid-space: 0;
     --flow-space: 1.5rem;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -634,8 +642,6 @@ textarea {
     grid-row: 2;
   }
 
-  /* featured article */
-
   /* most popular articles */
 
   .popular__list {
@@ -648,4 +654,15 @@ textarea {
   .popular__list > *:where(:not(:first-child)) {
     margin-top: 0;
   }
+}
+
+/* footer */
+
+.attribution {
+  padding-block: 1rem;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--clr-neutral-900);
 }
