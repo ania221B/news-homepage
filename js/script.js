@@ -8,10 +8,10 @@ navBtn.addEventListener('click', _ => {
   if (visible === 'false') {
     nav.setAttribute('data-visible', true)
     navBtn.setAttribute('aria-expanded', true)
-    document.body.classList.add('menu-is-open')
+    document.body.classList.add('overlay')
   } else {
     nav.setAttribute('data-visible', false)
     navBtn.setAttribute('aria-expanded', false)
-    document.body.classList.remove('menu-is-open')
+    document.body.classList.remove('overlay')
   }
 })

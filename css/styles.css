@@ -18,7 +18,7 @@
   --fs-600: 1.25rem;
   --fs-700: 1.5rem;
   --fs-800: 1.75rem;
-  --fs-900: 2.5rem;
+  --fs-900: 2.75rem;
 
   --fw-400: 400;
   --fw-700: 700;
@@ -29,7 +29,7 @@
   :root {
     --fs-400: 1rem;
     --fs-800: 2.5rem;
-    --fs-900: 3.5rem;
+    --fs-900: 3.75rem;
   }
 }
 
@@ -291,12 +291,6 @@ textarea {
   position: fixed;
   inset: 0;
   background-color: hsl(240 100% 5% / 0.5);
-  opacity: 0;
-  transition: opacity 750ms ease-in-out;
-}
-
-.overlay.menu-is-open::before {
-  opacity: 1;
   z-index: 2;
 }
 
@@ -351,7 +345,7 @@ textarea {
     display: block;
     position: absolute;
     inset: auto 0 auto auto;
-    padding-block: clamp(2rem, 5vw, 3rem);
+    aspect-ratio: 1;
     padding-inline: clamp(0.75rem, 2vw, 1.5rem);
     z-index: 11;
   }
