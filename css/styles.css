@@ -286,6 +286,20 @@ textarea {
     COMPONENTS
 ===================== */
 
+.overlay::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-color: hsl(240 100% 5% / 0.5);
+  opacity: 0;
+  transition: opacity 750ms ease-in-out;
+}
+
+.overlay.menu-is-open::before {
+  opacity: 1;
+  z-index: 2;
+}
+
 .primary-header {
   padding-block: clamp(2rem, 5vw, 3rem);
 }
@@ -304,7 +318,7 @@ textarea {
   height: 0.25rem;
   background-color: var(--clr-neutral-900);
 
-  transition: transform 300ms ease-in-out, opacity 200ms ease-in-out;
+  transition: transform 500ms ease-in-out, opacity 300ms ease-in-out;
 }
 
 .nav__list {
@@ -326,6 +340,9 @@ textarea {
 }
 
 @media (max-width: 45em) {
+  .body::before.menu-is-open {
+    opacity: 1;
+  }
   .primary-header {
     align-items: center;
   }
@@ -343,8 +360,12 @@ textarea {
     margin-top: 0.45rem;
   }
 
+  .mobile-btn[aria-expanded="true"] {
+    position: fixed;
+  }
+
   .mobile-btn[aria-expanded="true"] .line2 {
-    transform: translateX(50%);
+    transform: translateX(-50%);
     opacity: 0;
   }
 
