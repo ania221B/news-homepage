@@ -3,13 +3,13 @@
 ===================== */
 
 :root {
-  --clr-neutral-100: hsl(36, 100%, 99%);
-  --clr-neutral-200: hsl(233, 8%, 79%);
-  --clr-neutral-400: hsl(236, 13%, 42%);
-  --clr-neutral-900: hsl(240, 100%, 5%);
+  --clr-neutral-100: 36 100% 99%;
+  --clr-neutral-200: 233 8% 79%;
+  --clr-neutral-400: 236 13% 42%;
+  --clr-neutral-900: 240 100% 5%;
 
-  --clr-primary-400: hsl(35, 77%, 62%);
-  --clr-secondary-400: hsl(5, 85%, 63%);
+  --clr-primary-400: 35 77% 62%;
+  --clr-secondary-400: 5 85% 63%;
 
   --ff-primary: "Inter", sans-serif;
 
@@ -61,8 +61,8 @@ body {
   font-family: var(--ff-primary);
   font-size: var(--fs-400);
   font-weight: var(--fw-400);
-  color: var(--clr-neutral-400);
-  background-color: var(--clr-neutral-100);
+  color: hsl(var(--clr-neutral-400));
+  background-color: hsl(var(--clr-neutral-100));
 
   display: flex;
   flex-direction: column;
@@ -144,8 +144,8 @@ textarea {
 }
 
 ::selection {
-  color: var(--clr-neutral-100);
-  background-color: var(--clr-primary-400);
+  color: hsl(var(--clr-neutral-100));
+  background-color: hsl(var(--clr-primary-400));
 }
 
 main {
@@ -189,41 +189,41 @@ main {
 }
 
 .text-neutral-100 {
-  color: var(--clr-neutral-100);
+  color: hsl(var(--clr-neutral-100));
 }
 .text-neutral-200 {
-  color: var(--clr-neutral-200);
+  color: hsl(var(--clr-neutral-200));
 }
 .text-neutral-400 {
-  color: var(--clr-neutral-400);
+  color: hsl(var(--clr-neutral-400));
 }
 .text-neutral-900 {
-  color: var(--clr-neutral-900);
+  color: hsl(var(--clr-neutral-900));
 }
 .text-primary-400 {
-  color: var(--clr-primary-400);
+  color: hsl(var(--clr-primary-400));
 }
 .text-secondary-400 {
-  color: var(--clr-secondary-400);
+  color: hsl(var(--clr-secondary-400));
 }
 
 .bg-neutral-100 {
-  background-color: var(--clr-neutral-100);
+  background-color: hsl(var(--clr-neutral-100));
 }
 .bg-neutral-200 {
-  background-color: var(--clr-neutral-200);
+  background-color: hsl(var(--clr-neutral-200));
 }
 .bg-neutral-400 {
-  background-color: var(--clr-neutral-400);
+  background-color: hsl(var(--clr-neutral-400));
 }
 .bg-neutral-900 {
-  background-color: var(--clr-neutral-900);
+  background-color: hsl(var(--clr-neutral-900));
 }
 .bg-primary-400 {
-  background-color: var(--clr-primary-400);
+  background-color: hsl(var(--clr-primary-400));
 }
 .bg-secondary-400 {
-  background-color: var(--clr-secondary-400);
+  background-color: hsl(var(--clr-secondary-400));
 }
 
 .fs-400 {
@@ -293,7 +293,7 @@ main {
 .skip-to-content:focus {
   transform: translate(50%, 0);
   outline: none;
-  outline: 0.125rem solid var(--clr-neutral-900);
+  outline: 0.125rem solid hsl(var(--clr-neutral-900));
 }
 
 /* ===================
@@ -304,7 +304,7 @@ main {
   content: "";
   position: fixed;
   inset: 0;
-  background-color: hsl(240 100% 5% / 0.5);
+  background-color: hsl(var(--clr-neutral-900) / 0.5);
   z-index: 2;
 }
 
@@ -336,12 +336,12 @@ main {
 .link:hover,
 .link:focus {
   text-decoration: none;
-  color: var(--clr-secondary-400);
+  color: hsl(var(--clr-secondary-400));
 }
 
 .nav__link:focus-visible {
   outline: none;
-  outline: 0.125rem solid var(--clr-secondary-400);
+  outline: 0.125rem solid hsl(var(--clr-secondary-400));
   outline-offset: 0.5rem;
 }
 
@@ -370,7 +370,7 @@ main {
 
   .mobile-btn:focus-visible {
     outline: none;
-    outline: 0.125rem solid var(--clr-secondary-400);
+    outline: 0.125rem solid hsl(var(--clr-secondary-400));
   }
 
   .mobile-btn[aria-expanded="true"] {
@@ -380,7 +380,7 @@ main {
   .mobile-btn .line {
     width: 2.5rem;
     height: 0.25rem;
-    background-color: var(--clr-neutral-900);
+    background-color: hsl(var(--clr-neutral-900));
 
     transition: transform 500ms ease-in-out, opacity 300ms ease-in-out;
   }
@@ -408,7 +408,7 @@ main {
 
     padding-inline: 1.5rem;
     padding-block: max(5rem, 17vh);
-    background-color: var(--clr-neutral-100);
+    background-color: hsl(var(--clr-neutral-100));
 
     transform: translateX(100%);
     transition: transform 750ms ease-in-out;
@@ -427,7 +427,7 @@ main {
 
   .nav__link {
     font-size: var(--fs-600);
-    color: var(--clr-neutral-900);
+    color: hsl(var(--clr-neutral-900));
   }
 }
 
@@ -444,9 +444,9 @@ main {
 }
 
 .btn[data-type="primary"] {
-  --hover-bg: var(--clr-neutral-900);
-  background-color: var(--clr-secondary-400);
-  color: var(--clr-neutral-100);
+  --hover-bg: hsl(var(--clr-neutral-900));
+  background-color: hsl(var(--clr-secondary-400));
+  color: hsl(var(--clr-neutral-100));
 
   position: relative;
   z-index: 1;
@@ -454,9 +454,9 @@ main {
 }
 
 .btn[data-type="reversed"] {
-  --hover-bg: var(--clr-secondary-400);
-  background-color: var(--clr-neutral-900);
-  color: var(--clr-neutral-100);
+  --hover-bg: hsl(var(--clr-secondary-400));
+  background-color: hsl(var(--clr-neutral-900));
+  color: hsl(var(--clr-neutral-100));
 }
 
 .btn::before {
@@ -480,7 +480,7 @@ main {
 
 .btn[data-type="primary"]:focus-visible {
   outline: none;
-  outline: 0.125rem solid var(--clr-secondary-400);
+  outline: 0.125rem solid hsl(var(--clr-secondary-400));
 }
 
 .btn:hover::before,
@@ -496,9 +496,9 @@ main {
 }
 
 .card[data-theme="dark"] {
-  --accent: var(--clr-primary-400);
-  --bg: var(--clr-neutral-900);
-  --fg: var(--clr-neutral-200);
+  --accent: hsl(var(--clr-primary-400));
+  --bg: hsl(var(--clr-neutral-900));
+  --fg: hsl(var(--clr-neutral-200));
 }
 
 .card__list > * {
@@ -528,25 +528,25 @@ main {
 }
 
 .card .link {
-  color: var(--clr-neutral-100);
+  color: hsl(var(--clr-neutral-100));
 }
 
 .card .link:hover,
 .card .link:focus {
-  color: var(--clr-primary-400);
+  color: hsl(var(--clr-primary-400));
 }
 
 .numbered-titles h3 {
   display: block;
   font-size: var(--fs-800);
   font-weight: var(--fw-700);
-  color: var(--clr-neutral-200);
+  color: hsl(var(--clr-neutral-200));
 }
 
 .numbered-titles .title {
   font-size: var(--fs-600);
   font-weight: var(--fw-700);
-  color: var(--clr-neutral-900);
+  color: hsl(var(--clr-neutral-900));
 }
 
 /* ===================
@@ -664,5 +664,5 @@ main {
   text-align: center;
 }
 .attribution a {
-  color: var(--clr-neutral-900);
+  color: hsl(var(--clr-neutral-900));
 }
