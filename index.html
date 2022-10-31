@@ -54,8 +54,17 @@
             />
           </svg>
         </div>
-        <button aria-label="mobile navigation menu"></button>
-        <nav>
+        <button
+          class="btn mobile-btn"
+          aria-label="mobile navigation menu"
+          aria-controls="primary-nav"
+          aria-expanded="false"
+        >
+          <span class="hamburger line1 d-block"></span>
+          <span class="hamburger line2 d-block"></span>
+          <span class="hamburger line3 d-block"></span>
+        </button>
+        <nav class="primary-nav" data-visible="false">
           <ul class="nav__list flex" role="list">
             <li>
               <a href="#" class="nav__link">Home</a>
