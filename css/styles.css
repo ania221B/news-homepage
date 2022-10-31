@@ -284,14 +284,15 @@ main {
 
 .skip-to-content {
   position: absolute;
+  inset: 0 auto auto 50%;
   margin-inline: auto;
-  transform: translate(50%, -100%);
+  transform: translate(-50%, -100%);
   text-decoration: none;
   transition: transform 300ms ease-out;
 }
 
 .skip-to-content:focus {
-  transform: translate(50%, 0);
+  transform: translate(-50%, 0);
   outline: none;
   outline: 0.125rem solid hsl(var(--clr-neutral-900));
 }
@@ -455,6 +456,7 @@ main {
 
 .btn[data-type="reversed"] {
   --hover-bg: hsl(var(--clr-secondary-400));
+  text-align: center;
   background-color: hsl(var(--clr-neutral-900));
   color: hsl(var(--clr-neutral-100));
 }
