@@ -15,3 +15,15 @@ navBtn.addEventListener('click', _ => {
     document.body.classList.remove('overlay')
   }
 })
+
+document.body.addEventListener('click', e => {
+  const visible = nav.getAttribute('data-visible')
+
+  if (visible === 'true') {
+    if (!e.target.closest('.mobile-btn') && !e.target.closest('.primary-nav')) {
+      nav.setAttribute('data-visible', false)
+      navBtn.setAttribute('aria-expanded', false)
+      document.body.classList.remove('overlay')
+    }
+  }
+})
