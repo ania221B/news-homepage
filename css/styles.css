@@ -286,7 +286,6 @@ main {
   inset: 0 auto auto 50%;
   margin-inline: auto;
   transform: translate(-50%, -100%);
-  text-decoration: none;
   transition: transform 300ms ease-out;
 }
 
@@ -435,10 +434,12 @@ main {
   background: none;
   border: none;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .btn[data-type="primary"],
 .btn[data-type="reversed"] {
+  display: inline-block;
   padding-block: 0.75em;
   padding-inline: 2em;
 }
