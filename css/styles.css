@@ -434,11 +434,11 @@ main {
 
 /* buttons */
 
-.btn {
+.btn,
+.mobile-btn {
   background: none;
   border: none;
   cursor: pointer;
-  text-decoration: none;
 }
 
 .btn[data-type="primary"],
@@ -446,6 +446,7 @@ main {
   display: inline-block;
   padding-block: 0.75em;
   padding-inline: 2em;
+  text-decoration: none;
 }
 
 .btn[data-type="primary"] {
