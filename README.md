@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub](https://github.com/ania221B/news-homepage)
+- Live Site URL: [GitHub Pages](https://ania221b.github.io/news-homepage/)
 
 ## My process
 
@@ -173,5 +173,4 @@ I also applied some outline styling for keyboard focus using `focus-visible`:
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
 - Frontend Mentor - [@ania221B](https://www.frontendmentor.io/profile/yourusername)
