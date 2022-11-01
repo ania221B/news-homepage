@@ -316,6 +316,8 @@ main {
   align-items: center;
 }
 
+/*  navigation */
+
 .mobile-btn {
   display: none;
 }
@@ -430,6 +432,8 @@ main {
   }
 }
 
+/* buttons */
+
 .btn {
   background: none;
   border: none;
@@ -489,6 +493,8 @@ main {
 .btn:focus::before {
   clip-path: circle(75%);
 }
+
+/* side card */
 
 .card {
   padding-block: 2em;
