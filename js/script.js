@@ -1,29 +1,50 @@
 const nav = document.querySelector('.primary-nav')
-
 const navBtn = document.querySelector('.mobile-btn')
 
-navBtn.addEventListener('click', _ => {
-  const visible = nav.getAttribute('data-visible')
+function openMenu () {
+  nav.setAttribute('data-state', 'opened')
+  navBtn.setAttribute('aria-expanded', 'true')
+  document.body.classList.add('overlay')
+}
 
-  if (visible === 'false') {
-    nav.setAttribute('data-visible', true)
-    navBtn.setAttribute('aria-expanded', true)
-    document.body.classList.add('overlay')
-  } else {
-    nav.setAttribute('data-visible', false)
-    navBtn.setAttribute('aria-expanded', false)
-    document.body.classList.remove('overlay')
-  }
+function closeMenu () {
+  nav.setAttribute('data-state', 'closing')
+  navBtn.setAttribute('aria-expanded', 'false')
+  document.body.classList.remove('overlay')
+}
+
+navBtn.addEventListener('click', _ => {
+  const visible = navBtn.getAttribute('aria-expanded') === 'true'
+
+  visible ? closeMenu() : openMenu()
+
+  document.body.addEventListener(
+    'animationend',
+    e => {
+      if (e.animationName === 'closeMenu') {
+        nav.setAttribute('data-state', 'closed')
+      }
+    },
+    { once: true }
+  )
 })
 
 document.body.addEventListener('click', e => {
-  const visible = nav.getAttribute('data-visible')
+  const visible = navBtn.getAttribute('aria-expanded') === 'true'
 
-  if (visible === 'true') {
+  if (visible) {
     if (!e.target.closest('.mobile-btn') && !e.target.closest('.primary-nav')) {
-      nav.setAttribute('data-visible', false)
-      navBtn.setAttribute('aria-expanded', false)
-      document.body.classList.remove('overlay')
+      closeMenu()
     }
   }
+
+  document.body.addEventListener(
+    'animationend',
+    e => {
+      if (e.animationName === 'closeMenu') {
+        nav.setAttribute('data-state', 'closed')
+      }
+    },
+    { once: true }
+  )
 })
