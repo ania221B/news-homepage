@@ -17,7 +17,7 @@
   --fs-500: 1rem;
   --fs-600: 1.25rem;
   --fs-700: 1.5rem;
-  --fs-800: 1.75rem;
+  --fs-800: 2.5rem;
   --fs-900: clamp(2.75rem, 5vw + 1rem, 3.5rem);
 
   --fw-400: 400;
@@ -28,7 +28,6 @@
 @media (min-width: 45em) {
   :root {
     --fs-400: 1rem;
-    --fs-800: 2.5rem;
   }
 }
 
@@ -574,17 +573,38 @@ main {
   color: hsl(var(--clr-primary-400));
 }
 
-.numbered-titles h3 {
+/* article ranking */
+
+.numbered-titles {
+  counter-reset: items;
+}
+
+.numbered-titles .article-preview__body {
+  display: grid;
+  grid-auto-flow: column;
+  row-gap: 0.5rem;
+  align-content: center;
+}
+
+.numbered-titles .article-preview__body::before {
+  counter-increment: items;
+  content: '0' counter(items);
   display: block;
   font-size: var(--fs-800);
   font-weight: var(--fw-700);
   color: hsl(var(--clr-neutral-200));
+  grid-row: 1;
 }
 
 .numbered-titles .title {
   font-size: var(--fs-600);
   font-weight: var(--fw-700);
   color: hsl(var(--clr-neutral-900));
+  grid-row: 2;
+}
+
+.numbered-titles .content {
+  grid-row: 3;
 }
 
 /* ===================
@@ -602,11 +622,6 @@ main {
 
 .popular__list > *:where(:not(:first-child)) {
   margin: 1.5em 0 0 0;
-}
-
-.popular__list .article-preview__body {
-  --flow-space: 0.5rem;
-  margin-block: auto;
 }
 
 @media (min-width: 40em) {
